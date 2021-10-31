@@ -2,6 +2,8 @@
 
 * [Figma](https://www.figma.com/file/fxYvlsalZiM2AmpiTaHSeQ/Lenta-Flutter?node-id=0%3A1)
 
+Для теста можно использовать test@mail.ru test12
+
 Зависимости:
 - Firebase
 - Bloc
