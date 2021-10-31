@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
           title: 'CorgiGram',
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            primarySwatch: Colors.orange,
+            primarySwatch: Colors.lightGreen,
             appBarTheme: AppBarTheme(
               brightness: Brightness.light,
               color: Colors.white,

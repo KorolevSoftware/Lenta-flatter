@@ -32,7 +32,7 @@ class UserProfileImage extends StatelessWidget {
   Icon _noProfileIcon() {
     if (profileImage == null && profileImageUrl.isEmpty) {
       return Icon(
-        Icons.pets,
+        Icons.assignment_ind,
         color: Colors.grey[400],
         size: radius * 1.5,
       );

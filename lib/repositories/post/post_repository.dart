@@ -138,17 +138,13 @@ class PostRepository extends BasePostRepository {
     QuerySnapshot postsSnap;
     if (lastPostId == null) {
       postsSnap = await _firebaseFirestore
-          .collection(Paths.feeds)
-          .doc(userId)
-          .collection(Paths.userFeed)
+          .collection(Paths.posts)
           .orderBy('date', descending: true)
           .limit(5)
           .get();
     } else {
       final lastPostDoc = await _firebaseFirestore
-          .collection(Paths.feeds)
-          .doc(userId)
-          .collection(Paths.userFeed)
+          .collection(Paths.posts)
           .doc(lastPostId)
           .get();
 
@@ -157,9 +153,7 @@ class PostRepository extends BasePostRepository {
       }
 
       postsSnap = await _firebaseFirestore
-          .collection(Paths.feeds)
-          .doc(userId)
-          .collection(Paths.userFeed)
+          .collection(Paths.posts)
           .orderBy('date', descending: true)
           .startAfterDocument(lastPostDoc)
           .limit(5)

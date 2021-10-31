@@ -1,7 +1,7 @@
 enum BottomNavItem {
   profile,
   feed,
-  search,
-  notifications,
+  //search,
+  //notifications,
   create,
 }

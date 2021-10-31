@@ -54,8 +54,8 @@ class EditProfileScreen extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Edit Profile'),
-          backgroundColor: Colors.orangeAccent,
+          title: Text('Редактирование профиля'),
+          backgroundColor: Colors.white,
         ),
         body: BlocConsumer<EditProfileCubit, EditProfileState>(
           listener: (context, state) {
@@ -93,7 +93,7 @@ class EditProfileScreen extends StatelessWidget {
                         children: [
                           TextFormField(
                             initialValue: user.username,
-                            decoration: InputDecoration(hintText: 'Username'),
+                            decoration: InputDecoration(hintText: 'Имя пользователя'),
                             onChanged: (value) =>
                                 context
                                     .read<EditProfileCubit>()
@@ -102,13 +102,13 @@ class EditProfileScreen extends StatelessWidget {
                             value
                                 .trim()
                                 .isEmpty
-                                ? 'Username cannot be empty.'
+                                ? 'Имя пользователя не должно быть пустым.'
                                 : null,
                           ),
                           const SizedBox(height: 16.0),
                           TextFormField(
                             initialValue: user.bio,
-                            decoration: InputDecoration(hintText: 'Bio'),
+                            decoration: InputDecoration(hintText: 'Статус'),
                             onChanged: (value) =>
                                 context
                                     .read<EditProfileCubit>()
@@ -117,15 +117,13 @@ class EditProfileScreen extends StatelessWidget {
                             value
                                 .trim()
                                 .isEmpty
-                                ? 'Bio cannot be empty.'
+                                ? 'Статус не должно быть пустым.'
                                 : null,
                           ),
                           const SizedBox(height: 28.0),
                           RaisedButton(
                             elevation: 1.0,
-                            color: Theme
-                                .of(context)
-                                .primaryColor,
+                            color: Colors.grey[850],
                             textColor: Colors.white,
                             onPressed: () =>
                                 _submitForm(

@@ -57,12 +57,12 @@ class TabNavigator extends StatelessWidget {
           )..add(FeedFetchPosts()),
           child: FeedScreen(),
         );
-      case BottomNavItem.search:
-        return BlocProvider<SearchCubit>(
-          create: (context) =>
-              SearchCubit(userRepository: context.read<UserRepository>()),
-          child: SearchScreen(),
-        );
+      // case BottomNavItem.search:
+      //   return BlocProvider<SearchCubit>(
+      //     create: (context) =>
+      //         SearchCubit(userRepository: context.read<UserRepository>()),
+      //     child: SearchScreen(),
+      //   );
       case BottomNavItem.create:
         return BlocProvider<CreatePostCubit>(
           create: (context) => CreatePostCubit(
@@ -72,14 +72,14 @@ class TabNavigator extends StatelessWidget {
           ),
           child: CreatePostScreen(),
         );
-      case BottomNavItem.notifications:
-        return BlocProvider<NotificationsBloc>(
-          create: (context) => NotificationsBloc(
-            notificationRepository: context.read<NotificationRepository>(),
-            authBloc: context.read<AuthBloc>(),
-          ),
-          child: NotificationsScreen(),
-        );
+      // case BottomNavItem.notifications:
+      //   return BlocProvider<NotificationsBloc>(
+      //     create: (context) => NotificationsBloc(
+      //       notificationRepository: context.read<NotificationRepository>(),
+      //       authBloc: context.read<AuthBloc>(),
+      //     ),
+      //     child: NotificationsScreen(),
+      //   );
       case BottomNavItem.profile:
         return BlocProvider<ProfileBloc>(
           create: (_) => ProfileBloc(

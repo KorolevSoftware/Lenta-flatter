@@ -18,8 +18,8 @@ class CreatePostScreen extends StatelessWidget {
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Create Post'),
-          backgroundColor: Colors.orangeAccent,
+          title: const Text('Создание поста'),
+          backgroundColor: Colors.white,
         ),
         body: BlocConsumer<CreatePostCubit, CreatePostState>(
           listener: (context, state) {
@@ -31,7 +31,7 @@ class CreatePostScreen extends StatelessWidget {
                 SnackBar(
                   backgroundColor: Colors.green,
                   duration: const Duration(seconds: 1),
-                  content: const Text('Post Created'),
+                  content: const Text('Пост создан'),
                 ),
               );
             } else if (state.status == CreatePostStatus.error) {
@@ -55,7 +55,7 @@ class CreatePostScreen extends StatelessWidget {
                       child: state.postImage != null
                           ? Image.file(state.postImage, fit: BoxFit.cover)
                           : const Icon(
-                        Icons.pets,
+                        Icons.add_a_photo_outlined ,
                         color: Colors.grey,
                         size: 120.0,
                       ),
@@ -71,25 +71,25 @@ class CreatePostScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           TextFormField(
-                            decoration: InputDecoration(hintText: 'Caption'),
+                            decoration: InputDecoration(hintText: 'Описание'),
                             onChanged: (value) => context
                                 .read<CreatePostCubit>()
                                 .captionChanged(value),
                             validator: (value) => value.trim().isEmpty
-                                ? 'Caption cannot be empty.'
+                                ? 'Нужно описание'
                                 : null,
                           ),
                           const SizedBox(height: 28.0),
                           RaisedButton(
                             elevation: 1.0,
-                            color: Theme.of(context).primaryColor,
+                            color: Colors.grey[850],
                             textColor: Colors.white,
                             onPressed: () => _submitForm(
                               context,
                               state.postImage,
                               state.status == CreatePostStatus.submitting,
                             ),
-                            child: const Text('Post'),
+                            child: const Text('Поделиться'),
                           ),
                         ],
                       ),
@@ -108,7 +108,7 @@ class CreatePostScreen extends StatelessWidget {
     final pickedFile = await ImageHelper.pickImageFromGallery(
       context: context,
       cropStyle: CropStyle.rectangle,
-      title: 'Create Post',
+      title: 'Создание поста',
     );
     if (pickedFile != null) {
       context.read<CreatePostCubit>().postImageChanged(pickedFile);

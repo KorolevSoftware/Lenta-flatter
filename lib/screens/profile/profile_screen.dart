@@ -103,12 +103,16 @@ class _ProfileScreenState extends State<ProfileScreen>
             slivers: [
 
               SliverToBoxAdapter(
+
                 child: Column(
                   children: [
                     const SizedBox(height: 50),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(24.0, 32.0, 24.0, 0),
                       child: GestureDetector(
+                        onTap: () => Navigator.of(context).pushNamed(
+                          EditProfileScreen.routeName,
+                          arguments: EditProfileScreenArgs(context: context)),
                         child:Row(
                         children: [
                           UserProfileImage(
