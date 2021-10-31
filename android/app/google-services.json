@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "431592733390",
+    "project_id": "lenta-2517b",
+    "storage_bucket": "lenta-2517b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431592733390:android:0565eb740b44e7516eae9f",
+        "android_client_info": {
+          "package_name": "ru.korolev.vsu.lenta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431592733390-7jr2srsgbvom1v5hg5b1vsjg2r7m4s3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-G7yIfLckYLzKSoxpavaGL_OBeCP0fsY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431592733390-7jr2srsgbvom1v5hg5b1vsjg2r7m4s3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
