@@ -9,7 +9,9 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
 # Package Files #
 *.jar
 *.war
