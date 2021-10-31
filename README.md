@@ -12,5 +12,10 @@
 Приложение:
 (https://youtu.be/tp6Cs1M8MsE)
 
-Код приложения:
+Код приложения (на youtube не загружалось):
 (https://disk.yandex.ru/i/82yO14ljHTJazQ)
+
+## Скриншоты
+![Demo](demo/Screenshot_1635720926.png)
+![Demo](demo/Screenshot_1635720952.png)
+![Demo](demo/Screenshot_1635720973.png)
