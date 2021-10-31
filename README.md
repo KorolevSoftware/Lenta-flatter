@@ -3,7 +3,7 @@
 * [Figma](https://www.figma.com/file/fxYvlsalZiM2AmpiTaHSeQ/Lenta-Flutter?node-id=0%3A1)
 * [APK](demo/app.apk)
 
-Для теста можно использовать maksim@mail.ru maksim
+Для теста можно использовать maksim@mail.ru qwerty
 
 Зависимости:
 - Firebase
