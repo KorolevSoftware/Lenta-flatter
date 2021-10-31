@@ -19,3 +19,5 @@
 ![Demo](demo/Screenshot_1635720926.png)
 ![Demo](demo/Screenshot_1635720952.png)
 ![Demo](demo/Screenshot_1635720973.png)
+
+<img src="demo/Screenshot_1635720926.png" width="200"> <img src="demo/Screenshot_1635720952.png" width="200"> <img src="demo/Screenshot_1635720973.png" width="200">
