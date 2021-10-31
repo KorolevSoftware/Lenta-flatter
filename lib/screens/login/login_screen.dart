@@ -70,7 +70,7 @@ class LoginScreen extends StatelessWidget {
                             ),
                             const SizedBox(height: 16.0),
                             TextFormField(
-                              decoration: InputDecoration(hintText: 'Пароль'),
+                              decoration: InputDecoration(hintText: 'Password'),
                               obscureText: true,
                               onChanged: (value) => context
                                   .read<LoginCubit>()
