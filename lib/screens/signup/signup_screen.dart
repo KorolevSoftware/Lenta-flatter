@@ -65,17 +65,18 @@ class SignupScreen extends StatelessWidget {
                                   .read<SignupCubit>()
                                   .usernameChanged(value),
                               validator: (value) => value.trim().isEmpty
-                                  ? 'Please enter a valid email.'
+                                  ? 'Введите валидный email.'
                                   : null,
                             ),
                             const SizedBox(height: 16.0),
                             TextFormField(
+                              keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(hintText: 'Email'),
                               onChanged: (value) => context
                                   .read<SignupCubit>()
                                   .emailChanged(value),
                               validator: (value) => !value.contains('@')
-                                  ? 'Please enter a valid email.'
+                                  ? 'Должен быть @.'
                                   : null,
                             ),
                             const SizedBox(height: 16.0),
@@ -86,7 +87,7 @@ class SignupScreen extends StatelessWidget {
                                   .read<SignupCubit>()
                                   .passwordChanged(value),
                               validator: (value) => value.length < 6
-                                  ? 'Must be at least 6 characters.'
+                                  ? 'Минимум 6 символов.'
                                   : null,
                             ),
                             const SizedBox(height: 28.0),

@@ -50,7 +50,7 @@ class _FeedScreenState extends State<FeedScreen> {
             SnackBar(
               backgroundColor: Theme.of(context).primaryColor,
               duration: const Duration(seconds: 1),
-              content: const Text('Fetching More Posts...'),
+              content: const Text('Загрузка...'),
             ),
           );
         }

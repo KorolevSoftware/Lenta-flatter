@@ -66,21 +66,6 @@ class _ProfileScreenState extends State<ProfileScreen>
       },
       builder: (context, state) {
         return Scaffold(
-
-          // appBar: AppBar(
-          //   backgroundColor: Colors.orangeAccent,
-          //   title: Text(state.user.username),
-          //   actions: [
-          //     if (state.isCurrentUser)
-          //       IconButton(
-          //         icon: const Icon(Icons.exit_to_app),
-          //         onPressed: () {
-          //           context.read<AuthBloc>().add(AuthLogoutRequested());
-          //           context.read<LikedPostsCubit>().clearAllLikedPosts();
-          //         },
-          //       ),
-          //   ],
-          // ),
           body: _buildBody(state),
         );
       },
@@ -119,11 +104,12 @@ class _ProfileScreenState extends State<ProfileScreen>
                             radius: 40.0,
                             profileImageUrl: state.user.profileImageUrl,
                           ),
+                          SizedBox(width: 20,),
                           ProfileInfo(
                             username: state.user.username,
                             bio: state.user.bio,
                           ),
-                          SizedBox(width: 100,),
+                          SizedBox(width: 50,),
                           if (state.isCurrentUser)
                                 IconButton(
                                   icon: const Icon(Icons.exit_to_app),
@@ -161,7 +147,7 @@ class _ProfileScreenState extends State<ProfileScreen>
                   unselectedLabelColor: Colors.grey,
                   tabs: [
                     Tab(icon: Icon(Icons.list, size: 28.0)),
-                    Tab(icon: Icon(Icons.grid_on, size: 28.0)),
+                    Tab(icon: Icon(Icons.grade_rounded, size: 28.0)),
                   ],
                   indicatorWeight: 3.0,
                   onTap: (i) =>

@@ -25,7 +25,11 @@ class ProfileStats extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _Stats(count: posts, label: 'posts'),
+              Row ( children: [_Stats(count: posts, label: 'posts'),
+                IconButton(
+                  icon: const Icon(Icons.list, size: 40),
+                ),
+              ]),
             ],
           ),
           const SizedBox(height: 8.0),

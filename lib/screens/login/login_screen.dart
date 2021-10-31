@@ -59,12 +59,13 @@ class LoginScreen extends StatelessWidget {
                           children: [
                             const SizedBox(height: 12.0),
                             TextFormField(
+                                keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(hintText: 'Email'),
                               onChanged: (value) => context
                                   .read<LoginCubit>()
                                   .emailChanged(value),
                               validator: (value) => !value.contains('@')
-                                  ? 'Please enter a valid email.'
+                                  ? 'Введите валидный email.'
                                   : null,
                             ),
                             const SizedBox(height: 16.0),
@@ -75,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                                   .read<LoginCubit>()
                                   .passwordChanged(value),
                               validator: (value) => value.length < 6
-                                  ? 'Must be at least 6 characters.'
+                                  ? 'Минимум 6 символов.'
                                   : null,
                             ),
                             const SizedBox(height: 28.0),
